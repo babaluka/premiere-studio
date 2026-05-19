@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -156,7 +155,6 @@ export default function PremiereStudioHomepage() {
         {/* CONTENT */}
         <div className="relative z-10 text-center px-5 md:px-6 max-w-5xl">
 
-          {/* WELCOME */}
           <motion.p
             {...fadeZoom}
             className="uppercase tracking-[0.35em] text-[10px] md:text-sm text-white/60 mb-5"
@@ -164,7 +162,6 @@ export default function PremiereStudioHomepage() {
             {language === "al" ? "Mirë se vini në" : "Welcome To"}
           </motion.p>
 
-          {/* LOGO */}
           <motion.img
             src="/logo/logo.png"
             alt="PREMIERË STUDIO"
@@ -188,7 +185,6 @@ export default function PremiereStudioHomepage() {
             className="mx-auto w-[220px] sm:w-[280px] md:w-[380px] h-auto"
           />
 
-          {/* TAGLINE */}
           <motion.p
             {...fadeZoom}
             className="mt-8 md:mt-10 text-xs md:text-base tracking-[0.18em] md:tracking-[0.25em] uppercase text-white/70 leading-6"
@@ -198,7 +194,6 @@ export default function PremiereStudioHomepage() {
               : "We don’t just film moments — we tell your story"}
           </motion.p>
 
-          {/* BUTTONS */}
           <motion.div
             {...fadeZoom}
             className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6"
@@ -236,7 +231,6 @@ export default function PremiereStudioHomepage() {
       {/* ABOUT */}
       <section className="grid md:grid-cols-2 bg-[#050505]">
 
-        {/* IMAGE */}
         <motion.div
           {...fadeZoom}
           className="relative h-[420px] md:min-h-[800px] overflow-hidden md:rounded-l-[40px] order-1 md:order-2"
@@ -252,7 +246,6 @@ export default function PremiereStudioHomepage() {
 
         </motion.div>
 
-        {/* TEXT */}
         <div className="flex items-center px-6 md:px-20 py-16 md:py-20 order-2 md:order-1">
 
           <div className="max-w-xl">
@@ -312,7 +305,7 @@ export default function PremiereStudioHomepage() {
               : "Let’s create timeless memories together."}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 text-left max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 text-left max-w-5xl mx-auto">
 
             {/* PHONE */}
             <motion.div
@@ -321,7 +314,7 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-3 md:p-4 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-5 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
               <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
@@ -360,7 +353,7 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-3 md:p-4 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-5 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
               <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
@@ -399,7 +392,7 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-3 md:p-4 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-5 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
               <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
@@ -443,7 +436,7 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-3 md:p-4 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-5 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
               <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
