@@ -320,12 +320,12 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[25px] md:rounded-[30px] p-5 md:p-8 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-6 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
-              <div className="flex items-center gap-4 md:gap-5 mb-6 md:mb-8">
+              <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
 
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center text-2xl md:text-3xl">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-xl md:text-2xl">
                   ☎
                 </div>
 
@@ -334,7 +334,7 @@ export default function PremiereStudioHomepage() {
                     {language === "al" ? "Telefoni" : "Phone"}
                   </p>
 
-                  <p className="text-white text-base md:text-lg">
+                  <p className="text-sm md:text-base">
                     {language === "al"
                       ? "Kontakti Direkt"
                       : "Direct Contact"}
@@ -345,7 +345,7 @@ export default function PremiereStudioHomepage() {
 
               <a
                 href="tel:+38349298296"
-                className="text-xl md:text-3xl hover:text-white/70 transition"
+                className="text-lg md:text-2xl hover:text-white/70 transition"
               >
                 +383 49 298 296
               </a>
@@ -359,12 +359,12 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[25px] md:rounded-[30px] p-5 md:p-8 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-6 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
-              <div className="flex items-center gap-4 md:gap-5 mb-6 md:mb-8">
+              <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
 
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center text-2xl md:text-3xl">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-xl md:text-2xl">
                   ✉
                 </div>
 
@@ -373,7 +373,7 @@ export default function PremiereStudioHomepage() {
                     Email
                   </p>
 
-                  <p className="text-white text-base md:text-lg">
+                  <p className="text-sm md:text-base">
                     {language === "al"
                       ? "Na dërgo një mesazh"
                       : "Send Us A Message"}
@@ -398,16 +398,16 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[25px] md:rounded-[30px] p-5 md:p-8 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-6 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
-              <div className="flex items-center gap-4 md:gap-5 mb-6 md:mb-8">
+              <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
 
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center">
                   <img
                     src="/icons/instagram.png"
                     alt="Instagram"
-                    className="w-7 h-7 md:w-8 md:h-8 object-contain"
+                    className="w-6 h-6 md:w-7 md:h-7 object-contain"
                   />
                 </div>
 
@@ -416,7 +416,7 @@ export default function PremiereStudioHomepage() {
                     Instagram
                   </p>
 
-                  <p className="text-white text-base md:text-lg">
+                  <p className="text-sm md:text-base">
                     {language === "al"
                       ? "Na ndiqni"
                       : "Follow Our Work"}
@@ -442,16 +442,16 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[25px] md:rounded-[30px] p-5 md:p-8 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-6 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
-              <div className="flex items-center gap-4 md:gap-5 mb-6 md:mb-8">
+              <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
 
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center">
                   <img
                     src="/icons/location.png"
                     alt="Location"
-                    className="w-7 h-7 md:w-8 md:h-8 object-contain"
+                    className="w-6 h-6 md:w-7 md:h-7 object-contain"
                   />
                 </div>
 
@@ -460,7 +460,7 @@ export default function PremiereStudioHomepage() {
                     {language === "al" ? "Lokacioni" : "Location"}
                   </p>
 
-                  <p className="text-white text-base md:text-lg">
+                  <p className="text-sm md:text-base">
                     {language === "al"
                       ? "Vizitoni studion tonë"
                       : "Visit Our Studio"}
