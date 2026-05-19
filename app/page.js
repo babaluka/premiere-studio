@@ -21,12 +21,12 @@ export default function PremiereStudioHomepage() {
           >
             <img
               src="/logo/logo.png"
-              alt="PREMIÈRE STUDIO"
+              alt="PREMIERË STUDIO"
               className="h-14 w-auto"
             />
           </motion.div>
 
-          {/* NAV LINKS */}
+          {/* NAVIGATION */}
           <nav className="hidden md:flex gap-12 text-sm tracking-[0.2em] uppercase text-white/80">
             {["Home", "Portfolio", "About", "Services", "Contact"].map(
               (item, index) => (
@@ -95,7 +95,7 @@ export default function PremiereStudioHomepage() {
           {/* LOGO */}
           <motion.img
             src="/logo/logo.png"
-            alt="PREMIÈRE STUDIO"
+            alt="PREMIERË STUDIO"
             className="mx-auto w-[380px]"
             initial={{
               opacity: 0,
@@ -133,14 +133,10 @@ export default function PremiereStudioHomepage() {
             className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6"
           >
 
-            {/* WATCH SHOWREEL */}
+            {/* SHOWREEL */}
             <motion.button
-              whileHover={{
-                scale: 1.1,
-              }}
-              whileTap={{
-                scale: 0.95,
-              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.4 }}
@@ -150,16 +146,12 @@ export default function PremiereStudioHomepage() {
               Watch Showreel
             </motion.button>
 
-            {/* BOOK YOUR DATE */}
+            {/* BOOK */}
             <motion.a
               href="https://calendly.com/egzongjuka/30min"
               target="_blank"
-              whileHover={{
-                scale: 1.1,
-              }}
-              whileTap={{
-                scale: 0.95,
-              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.4 }}
@@ -205,7 +197,7 @@ export default function PremiereStudioHomepage() {
               viewport={{ once: false }}
               className="text-white/70 leading-8 text-lg"
             >
-              At PREMIÈRE STUDIO, we create cinematic wedding films that capture
+              At PREMIERË STUDIO, we create cinematic wedding films that capture
               real emotions and transform them into timeless memories.
             </motion.p>
 
@@ -273,7 +265,7 @@ export default function PremiereStudioHomepage() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.4 }}
             viewport={{ once: false }}
-            className="inline-flex items-center gap-4 border border-white/20 px-12 py-6 rounded-full uppercase tracking-[0.3em] text-sm hover:bg-white hover:text-black hover:scale-105 transition duration-700"
+            className="inline-flex items-center gap-4 border border-white/20 px-12 py-6 rounded-full uppercase tracking-[0.3em] text-sm hover:bg-white hover:text-black transition duration-700"
           >
             Book Now →
           </motion.a>
@@ -283,7 +275,7 @@ export default function PremiereStudioHomepage() {
 
       {/* FOOTER */}
       <footer className="border-t border-white/10 py-16 text-center text-white/40 text-sm tracking-[0.2em] uppercase bg-black">
-        © 2026 PREMIÈRE STUDIO — All Rights Reserved
+        © 2026 PREMIERË STUDIO — All Rights Reserved
       </footer>
     </div>
   );
