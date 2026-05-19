@@ -2,17 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
-
+html,
 body {
   margin: 0;
   padding: 0;
-  background: black;
-  color: white;
   overflow-x: hidden;
-  font-family: serif;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
 }
 
 * {
