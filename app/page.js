@@ -225,7 +225,7 @@ export default function PremiereStudioHomepage() {
         </motion.div>
       </motion.section>
 
-      {/* BOOKING */}
+      {/* BOOKING SECTION */}
       <motion.section
         initial={{ opacity: 0, scale: 0.9, y: 100 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
