@@ -99,13 +99,12 @@ export default function PremiereStudioHomepage() {
 
           {/* BUTTONS */}
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
             className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6"
           >
 
-            {/* SHOWREEL */}
             <motion.button
               whileHover={{ scale: 1.08 }}
               className="border border-white/30 px-8 py-4 rounded-full uppercase tracking-[0.2em] text-sm hover:bg-white hover:text-black transition duration-500"
@@ -113,7 +112,6 @@ export default function PremiereStudioHomepage() {
               Watch Showreel
             </motion.button>
 
-            {/* CONTACT */}
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.08 }}
@@ -260,8 +258,14 @@ export default function PremiereStudioHomepage() {
 
               <div className="flex items-center gap-5 mb-8">
 
-                <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center text-3xl">
-                  ◎
+                <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center">
+
+                  <img
+                    src="/icons/instagram.png"
+                    alt="Instagram"
+                    className="w-8 h-8 object-contain"
+                  />
+
                 </div>
 
                 <div>
@@ -291,8 +295,14 @@ export default function PremiereStudioHomepage() {
 
               <div className="flex items-center gap-5 mb-8">
 
-                <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center text-3xl">
-                  ⌖
+                <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center">
+
+                  <img
+                    src="/icons/location.png"
+                    alt="Location"
+                    className="w-8 h-8 object-contain"
+                  />
+
                 </div>
 
                 <div>
