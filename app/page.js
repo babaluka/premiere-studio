@@ -311,7 +311,7 @@ export default function PremiereStudioHomepage() {
               : "Let’s create timeless memories together."}
           </p>
 
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 text-left max-w-4xl mx-auto">
 
             {/* PHONE */}
             <motion.div
@@ -320,17 +320,17 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-6 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-3 md:p-5 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
-              <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
+              <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
 
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-xl md:text-2xl">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-lg md:text-xl">
                   ☎
                 </div>
 
                 <div>
-                  <p className="uppercase tracking-[0.25em] text-white/40 text-[10px] md:text-xs mb-1">
+                  <p className="uppercase tracking-[0.25em] text-white/40 text-[9px] md:text-[10px] mb-1">
                     {language === "al" ? "Telefoni" : "Phone"}
                   </p>
 
@@ -345,7 +345,7 @@ export default function PremiereStudioHomepage() {
 
               <a
                 href="tel:+38349298296"
-                className="text-lg md:text-2xl hover:text-white/70 transition"
+                className="text-base md:text-xl hover:text-white/70 transition"
               >
                 +383 49 298 296
               </a>
@@ -359,17 +359,17 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-6 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-3 md:p-5 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
-              <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
+              <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
 
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-xl md:text-2xl">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-lg md:text-xl">
                   ✉
                 </div>
 
                 <div>
-                  <p className="uppercase tracking-[0.25em] text-white/40 text-[10px] md:text-xs mb-1">
+                  <p className="uppercase tracking-[0.25em] text-white/40 text-[9px] md:text-[10px] mb-1">
                     Email
                   </p>
 
@@ -384,7 +384,7 @@ export default function PremiereStudioHomepage() {
 
               <a
                 href="mailto:egzongjuka@gmail.com"
-                className="text-base md:text-2xl hover:text-white/70 transition break-all"
+                className="text-sm md:text-lg hover:text-white/70 transition break-all"
               >
                 egzongjuka@gmail.com
               </a>
@@ -398,21 +398,21 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-6 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-3 md:p-5 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
-              <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
+              <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
 
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center">
                   <img
                     src="/icons/instagram.png"
                     alt="Instagram"
-                    className="w-6 h-6 md:w-7 md:h-7 object-contain"
+                    className="w-5 h-5 md:w-6 md:h-6 object-contain"
                   />
                 </div>
 
                 <div>
-                  <p className="uppercase tracking-[0.25em] text-white/40 text-[10px] md:text-xs mb-1">
+                  <p className="uppercase tracking-[0.25em] text-white/40 text-[9px] md:text-[10px] mb-1">
                     Instagram
                   </p>
 
@@ -428,7 +428,7 @@ export default function PremiereStudioHomepage() {
               <a
                 href="https://www.instagram.com/premierestudioo/"
                 target="_blank"
-                className="text-lg md:text-2xl hover:text-white/70 transition"
+                className="text-sm md:text-lg hover:text-white/70 transition"
               >
                 @premierestudioo
               </a>
@@ -442,21 +442,21 @@ export default function PremiereStudioHomepage() {
                 y: -6,
                 scale: 1.01,
               }}
-              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-4 md:p-6 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+              className="border border-white/10 rounded-[22px] md:rounded-[26px] p-3 md:p-5 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
             >
 
-              <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
+              <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-5">
 
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center">
                   <img
                     src="/icons/location.png"
                     alt="Location"
-                    className="w-6 h-6 md:w-7 md:h-7 object-contain"
+                    className="w-5 h-5 md:w-6 md:h-6 object-contain"
                   />
                 </div>
 
                 <div>
-                  <p className="uppercase tracking-[0.25em] text-white/40 text-[10px] md:text-xs mb-1">
+                  <p className="uppercase tracking-[0.25em] text-white/40 text-[9px] md:text-[10px] mb-1">
                     {language === "al" ? "Lokacioni" : "Location"}
                   </p>
 
@@ -472,7 +472,7 @@ export default function PremiereStudioHomepage() {
               <a
                 href="https://maps.app.goo.gl/WhFRb43ebb2J9YvD6"
                 target="_blank"
-                className="text-lg md:text-2xl hover:text-white/70 transition"
+                className="text-sm md:text-lg hover:text-white/70 transition"
               >
                 Pejë, Kosovo
               </a>
