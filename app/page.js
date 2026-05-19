@@ -43,16 +43,6 @@ export default function PremiereStudioHomepage() {
             )}
           </nav>
 
-          {/* BOOK BUTTON */}
-          <motion.a
-            href="https://calendly.com/egzongjuka/30min"
-            target="_blank"
-            whileHover={{ scale: 1.05 }}
-            className="border border-white/30 px-6 py-3 rounded-full text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-black transition duration-500"
-          >
-            Book Your Date
-          </motion.a>
-
         </div>
       </header>
 
@@ -115,6 +105,7 @@ export default function PremiereStudioHomepage() {
             className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6"
           >
 
+            {/* SHOWREEL */}
             <motion.button
               whileHover={{ scale: 1.08 }}
               className="border border-white/30 px-8 py-4 rounded-full uppercase tracking-[0.2em] text-sm hover:bg-white hover:text-black transition duration-500"
@@ -122,13 +113,13 @@ export default function PremiereStudioHomepage() {
               Watch Showreel
             </motion.button>
 
+            {/* CONTACT */}
             <motion.a
-              href="https://calendly.com/egzongjuka/30min"
-              target="_blank"
+              href="#contact"
               whileHover={{ scale: 1.08 }}
               className="border border-white/30 px-8 py-4 rounded-full uppercase tracking-[0.2em] text-sm hover:bg-white hover:text-black transition duration-500"
             >
-              Book Your Date
+              Contact Us
             </motion.a>
 
           </motion.div>
@@ -181,34 +172,152 @@ export default function PremiereStudioHomepage() {
         </motion.div>
       </section>
 
-      {/* BOOKING SECTION */}
-      <section className="relative py-40 px-8 overflow-hidden border-t border-white/10">
-
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black" />
+      {/* CONTACT SECTION */}
+      <section
+        id="contact"
+        className="py-32 px-8 border-t border-white/10 bg-[#050505]"
+      >
 
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.6 }}
-          className="relative z-10 max-w-5xl mx-auto text-center"
+          transition={{ duration: 1.5 }}
+          className="max-w-6xl mx-auto text-center"
         >
 
           <h2 className="text-5xl md:text-7xl uppercase mb-10">
-            Reserve Your Date
+            Contact
           </h2>
 
-          <p className="text-white/60 text-lg mb-12">
-            Your wedding deserves a cinematic story.
+          <p className="text-white/60 text-lg mb-16">
+            Let’s create timeless memories together.
           </p>
 
-          <motion.a
-            href="https://calendly.com/egzongjuka/30min"
-            target="_blank"
-            whileHover={{ scale: 1.08 }}
-            className="inline-flex items-center gap-4 border border-white/20 px-12 py-6 rounded-full uppercase tracking-[0.3em] text-sm hover:bg-white hover:text-black transition duration-700"
-          >
-            Book Now →
-          </motion.a>
+          <div className="grid md:grid-cols-2 gap-10 text-left">
+
+            {/* PHONE */}
+            <div className="border border-white/10 rounded-[30px] p-10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500">
+
+              <div className="flex items-center gap-5 mb-8">
+
+                <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center text-3xl">
+                  ☎
+                </div>
+
+                <div>
+                  <p className="uppercase tracking-[0.3em] text-white/40 text-xs mb-1">
+                    Phone
+                  </p>
+
+                  <p className="text-white text-lg">
+                    Direct Contact
+                  </p>
+                </div>
+
+              </div>
+
+              <a
+                href="tel:+38349298296"
+                className="text-3xl md:text-4xl font-normal hover:text-white/70 transition leading-none"
+              >
+                +383 49 298 296
+              </a>
+
+            </div>
+
+            {/* EMAIL */}
+            <div className="border border-white/10 rounded-[30px] p-10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500">
+
+              <div className="flex items-center gap-5 mb-8">
+
+                <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center text-3xl">
+                  ✉
+                </div>
+
+                <div>
+                  <p className="uppercase tracking-[0.3em] text-white/40 text-xs mb-1">
+                    Email
+                  </p>
+
+                  <p className="text-white text-lg">
+                    Send Us A Message
+                  </p>
+                </div>
+
+              </div>
+
+              <a
+                href="mailto:egzongjuka@gmail.com"
+                className="text-2xl md:text-3xl font-normal hover:text-white/70 transition break-all"
+              >
+                egzongjuka@gmail.com
+              </a>
+
+            </div>
+
+            {/* INSTAGRAM */}
+            <div className="border border-white/10 rounded-[30px] p-10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500">
+
+              <div className="flex items-center gap-5 mb-8">
+
+                <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center text-3xl">
+                  ◎
+                </div>
+
+                <div>
+                  <p className="uppercase tracking-[0.3em] text-white/40 text-xs mb-1">
+                    Instagram
+                  </p>
+
+                  <p className="text-white text-lg">
+                    Follow Our Work
+                  </p>
+                </div>
+
+              </div>
+
+              <a
+                href="https://www.instagram.com/premierestudioo/"
+                target="_blank"
+                className="text-2xl md:text-3xl font-normal hover:text-white/70 transition"
+              >
+                @premierestudioo
+              </a>
+
+            </div>
+
+            {/* LOCATION */}
+            <div className="border border-white/10 rounded-[30px] p-10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500">
+
+              <div className="flex items-center gap-5 mb-8">
+
+                <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center text-3xl">
+                  ⌖
+                </div>
+
+                <div>
+                  <p className="uppercase tracking-[0.3em] text-white/40 text-xs mb-1">
+                    Location
+                  </p>
+
+                  <p className="text-white text-lg">
+                    Visit Our Studio
+                  </p>
+                </div>
+
+              </div>
+
+              <a
+                href="https://maps.app.goo.gl/WhFRb43ebb2J9YvD6"
+                target="_blank"
+                className="text-2xl md:text-3xl font-normal hover:text-white/70 transition"
+              >
+                Pejë, Kosovo
+              </a>
+
+            </div>
+
+          </div>
 
         </motion.div>
       </section>
