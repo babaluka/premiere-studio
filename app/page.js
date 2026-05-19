@@ -230,6 +230,64 @@ export default function PremiereStudioHomepage() {
 
       </section>
 
+      {/* ABOUT */}
+      <section className="grid md:grid-cols-2 bg-[#050505]">
+
+        {/* IMAGE */}
+        <motion.div
+          {...fadeZoom}
+          className="relative h-[420px] md:min-h-[800px] overflow-hidden md:rounded-l-[40px] order-1 md:order-2"
+        >
+
+          <img
+            src="/images/about.JPG"
+            alt="About"
+            className="absolute inset-0 w-full h-full object-cover scale-105"
+          />
+
+          <div className="absolute inset-0 bg-black/10" />
+
+        </motion.div>
+
+        {/* TEXT */}
+        <div className="flex items-center px-6 md:px-20 py-16 md:py-20 order-2 md:order-1">
+
+          <div className="max-w-xl">
+
+            <motion.h2
+              {...fadeZoom}
+              className="text-4xl md:text-6xl leading-tight mb-8 md:mb-10"
+            >
+              {language === "al" ? (
+                <>
+                  Ne Kapim
+                  <br />
+                  Momentet që Kanë Rëndësi.
+                </>
+              ) : (
+                <>
+                  We Capture
+                  <br />
+                  What Matters.
+                </>
+              )}
+            </motion.h2>
+
+            <motion.p
+              {...fadeZoom}
+              className="text-white/70 leading-7 md:leading-8 text-base md:text-lg"
+            >
+              {language === "al"
+                ? "Në PREMIERË STUDIO krijojmë video dhe fotografi kinematografike që kapin emocionet reale dhe i shndërrojnë në kujtime të përjetshme."
+                : "At PREMIERË STUDIO, we create cinematic wedding films that capture real emotions and transform them into timeless memories."}
+            </motion.p>
+
+          </div>
+
+        </div>
+
+      </section>
+
       {/* CONTACT */}
       <section
         id="contact"
