@@ -22,7 +22,7 @@ export default function PremiereStudioHomepage() {
             <img
               src="/logo/logo.png"
               alt="PREMIERË STUDIO"
-              className="h-14 w-auto"
+              className="h-12 md:h-14 w-auto object-contain"
             />
           </motion.div>
 
@@ -69,7 +69,7 @@ export default function PremiereStudioHomepage() {
           }}
         />
 
-        {/* DARK OVERLAY */}
+        {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/70" />
 
         {/* HERO CONTENT */}
@@ -96,7 +96,7 @@ export default function PremiereStudioHomepage() {
           <motion.img
             src="/logo/logo.png"
             alt="PREMIERË STUDIO"
-            className="mx-auto w-[380px]"
+            className="mx-auto w-[280px] md:w-[380px] h-auto"
             initial={{
               opacity: 0,
               scale: 0.6,
@@ -167,8 +167,8 @@ export default function PremiereStudioHomepage() {
 
       {/* ABOUT SECTION */}
       <motion.section
-        initial={{ opacity: 0, x: -200 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: false }}
         className="grid md:grid-cols-2 min-h-screen bg-[#050505]"
@@ -206,8 +206,8 @@ export default function PremiereStudioHomepage() {
 
         {/* ABOUT IMAGE */}
         <motion.div
-          initial={{ opacity: 0, x: 200 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
           viewport={{ once: false }}
           className="relative min-h-[800px] overflow-hidden rounded-l-[40px]"
@@ -225,9 +225,9 @@ export default function PremiereStudioHomepage() {
         </motion.div>
       </motion.section>
 
-      {/* BOOKING SECTION */}
+      {/* BOOKING */}
       <motion.section
-        initial={{ opacity: 0, scale: 0.9, y: 200 }}
+        initial={{ opacity: 0, scale: 0.9, y: 100 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1.8 }}
         viewport={{ once: false }}
