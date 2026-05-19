@@ -6,20 +6,53 @@ import { useState } from "react";
 export default function PremiereStudioHomepage() {
   const [language, setLanguage] = useState("al");
 
+  const fadeZoom = {
+    initial: {
+      opacity: 0,
+      scale: 1.08,
+      filter: "blur(14px)",
+      y: 30,
+    },
+    whileInView: {
+      opacity: 1,
+      scale: 1,
+      filter: "blur(0px)",
+      y: 0,
+    },
+    transition: {
+      duration: 2,
+      ease: [0.16, 1, 0.3, 1],
+    },
+    viewport: {
+      once: false,
+      amount: 0.3,
+    },
+  };
+
   return (
-    <div
-      id="top"
-      className="bg-black text-white min-h-screen overflow-x-hidden font-serif"
-    >
+    <div className="bg-black text-white min-h-screen overflow-x-hidden font-serif">
+
       {/* NAVBAR */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
+      <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-2xl border-b border-white/10">
+
         <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 md:py-6 flex items-center justify-between">
 
           {/* LOGO */}
           <motion.div
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial={{
+              opacity: 0,
+              y: -20,
+              filter: "blur(10px)",
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 1.8,
+              ease: [0.16, 1, 0.3, 1],
+            }}
           >
             <img
               src="/logo/logo.png"
@@ -33,6 +66,7 @@ export default function PremiereStudioHomepage() {
 
             {/* NAVIGATION */}
             <nav className="hidden md:flex gap-12 text-sm tracking-[0.2em] uppercase text-white/80">
+
               {[
                 language === "al" ? "Kreu" : "Home",
                 language === "al" ? "Rreth Nesh" : "About",
@@ -41,14 +75,27 @@ export default function PremiereStudioHomepage() {
                 <motion.a
                   key={index}
                   href="#"
-                  initial={{ opacity: 0, y: -30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{
+                    opacity: 0,
+                    y: -10,
+                    filter: "blur(10px)",
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    delay: index * 0.08,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
                   className="hover:text-white transition duration-500"
                 >
                   {item}
                 </motion.a>
               ))}
+
             </nav>
 
             {/* LANGUAGE SWITCH */}
@@ -56,7 +103,7 @@ export default function PremiereStudioHomepage() {
 
               <button
                 onClick={() => setLanguage("al")}
-                className={`transition ${
+                className={`transition duration-500 ${
                   language === "al"
                     ? "text-white"
                     : "text-white/40 hover:text-white"
@@ -69,7 +116,7 @@ export default function PremiereStudioHomepage() {
 
               <button
                 onClick={() => setLanguage("en")}
-                className={`transition ${
+                className={`transition duration-500 ${
                   language === "en"
                     ? "text-white"
                     : "text-white/40 hover:text-white"
@@ -83,54 +130,66 @@ export default function PremiereStudioHomepage() {
           </div>
 
         </div>
+
       </header>
 
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
         {/* HERO IMAGE */}
-        <img
+        <motion.img
           src="/images/hero.jpg"
           alt="Hero"
+          initial={{ scale: 1.15 }}
+          animate={{ scale: 1.05 }}
+          transition={{
+            duration: 4,
+            ease: [0.16, 1, 0.3, 1],
+          }}
           className="absolute inset-0 w-full h-full object-cover"
         />
 
         {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/70" />
 
-        {/* HERO CONTENT */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
-          className="relative z-10 text-center px-5 md:px-6 max-w-5xl"
-        >
+        {/* CONTENT */}
+        <div className="relative z-10 text-center px-5 md:px-6 max-w-5xl">
 
           {/* WELCOME */}
           <motion.p
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            {...fadeZoom}
             className="uppercase tracking-[0.35em] text-[10px] md:text-sm text-white/60 mb-5"
           >
             {language === "al" ? "Mirë se vini në" : "Welcome To"}
           </motion.p>
 
-          {/* BIG LOGO */}
+          {/* LOGO */}
           <motion.img
             src="/logo/logo.png"
             alt="PREMIERË STUDIO"
+            initial={{
+              opacity: 0,
+              scale: 1.3,
+              filter: "blur(20px)",
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 2.4,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            viewport={{
+              once: false,
+            }}
             className="mx-auto w-[220px] sm:w-[280px] md:w-[380px] h-auto"
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.5 }}
           />
 
           {/* TAGLINE */}
           <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5 }}
+            {...fadeZoom}
             className="mt-8 md:mt-10 text-xs md:text-base tracking-[0.18em] md:tracking-[0.25em] uppercase text-white/70 leading-6"
           >
             {language === "al"
@@ -140,14 +199,16 @@ export default function PremiereStudioHomepage() {
 
           {/* BUTTONS */}
           <motion.div
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
+            {...fadeZoom}
             className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6"
           >
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{
+                scale: 1.03,
+                y: -2,
+              }}
+              transition={{ duration: 0.4 }}
               className="w-full sm:w-auto border border-white/30 px-7 md:px-8 py-4 rounded-full uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-white hover:text-black transition duration-500"
             >
               {language === "al" ? "Shiko Showreel" : "Watch Showreel"}
@@ -155,7 +216,11 @@ export default function PremiereStudioHomepage() {
 
             <motion.a
               href="#contact"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{
+                scale: 1.03,
+                y: -2,
+              }}
+              transition={{ duration: 0.4 }}
               className="w-full sm:w-auto border border-white/30 px-7 md:px-8 py-4 rounded-full uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-white hover:text-black transition duration-500"
             >
               {language === "al" ? "Kontakti" : "Contact Us"}
@@ -163,24 +228,23 @@ export default function PremiereStudioHomepage() {
 
           </motion.div>
 
-        </motion.div>
+        </div>
+
       </section>
 
-      {/* ABOUT SECTION */}
+      {/* ABOUT */}
       <section className="grid md:grid-cols-2 bg-[#050505]">
 
-        {/* IMAGE FIRST ON MOBILE */}
+        {/* IMAGE */}
         <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
+          {...fadeZoom}
           className="relative h-[420px] md:min-h-[800px] overflow-hidden md:rounded-l-[40px] order-1 md:order-2"
         >
 
           <img
             src="/images/about.JPG"
             alt="About"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover scale-105"
           />
 
           <div className="absolute inset-0 bg-black/10" />
@@ -188,15 +252,14 @@ export default function PremiereStudioHomepage() {
         </motion.div>
 
         {/* TEXT */}
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.4 }}
-          className="flex items-center px-6 md:px-20 py-16 md:py-20 order-2 md:order-1"
-        >
+        <div className="flex items-center px-6 md:px-20 py-16 md:py-20 order-2 md:order-1">
+
           <div className="max-w-xl">
 
-            <h2 className="text-4xl md:text-6xl leading-tight mb-8 md:mb-10">
+            <motion.h2
+              {...fadeZoom}
+              className="text-4xl md:text-6xl leading-tight mb-8 md:mb-10"
+            >
               {language === "al" ? (
                 <>
                   Ne Kapim
@@ -210,29 +273,31 @@ export default function PremiereStudioHomepage() {
                   What Matters.
                 </>
               )}
-            </h2>
+            </motion.h2>
 
-            <p className="text-white/70 leading-7 md:leading-8 text-base md:text-lg">
+            <motion.p
+              {...fadeZoom}
+              className="text-white/70 leading-7 md:leading-8 text-base md:text-lg"
+            >
               {language === "al"
                 ? "Në PREMIERË STUDIO krijojmë video dhe fotografi kinematografike që kapin emocionet reale dhe i shndërrojnë në kujtime të përjetshme."
                 : "At PREMIERË STUDIO, we create cinematic wedding films that capture real emotions and transform them into timeless memories."}
-            </p>
+            </motion.p>
 
           </div>
-        </motion.div>
+
+        </div>
 
       </section>
 
-      {/* CONTACT SECTION */}
+      {/* CONTACT */}
       <section
         id="contact"
         className="py-20 md:py-32 px-5 md:px-8 border-t border-white/10 bg-[#050505]"
       >
 
         <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
+          {...fadeZoom}
           className="max-w-6xl mx-auto text-center"
         >
 
@@ -246,10 +311,17 @@ export default function PremiereStudioHomepage() {
               : "Let’s create timeless memories together."}
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 md:gap-10 text-left">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6 text-left">
 
             {/* PHONE */}
-            <div className="border border-white/10 rounded-[25px] md:rounded-[30px] p-6 md:p-10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500">
+            <motion.div
+              {...fadeZoom}
+              whileHover={{
+                y: -6,
+                scale: 1.01,
+              }}
+              className="border border-white/10 rounded-[25px] md:rounded-[30px] p-5 md:p-8 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+            >
 
               <div className="flex items-center gap-4 md:gap-5 mb-6 md:mb-8">
 
@@ -273,15 +345,22 @@ export default function PremiereStudioHomepage() {
 
               <a
                 href="tel:+38349298296"
-                className="text-2xl md:text-4xl font-normal hover:text-white/70 transition leading-none"
+                className="text-xl md:text-3xl hover:text-white/70 transition"
               >
                 +383 49 298 296
               </a>
 
-            </div>
+            </motion.div>
 
             {/* EMAIL */}
-            <div className="border border-white/10 rounded-[25px] md:rounded-[30px] p-6 md:p-10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500">
+            <motion.div
+              {...fadeZoom}
+              whileHover={{
+                y: -6,
+                scale: 1.01,
+              }}
+              className="border border-white/10 rounded-[25px] md:rounded-[30px] p-5 md:p-8 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+            >
 
               <div className="flex items-center gap-4 md:gap-5 mb-6 md:mb-8">
 
@@ -305,26 +384,31 @@ export default function PremiereStudioHomepage() {
 
               <a
                 href="mailto:egzongjuka@gmail.com"
-                className="text-lg md:text-3xl font-normal hover:text-white/70 transition break-all"
+                className="text-base md:text-2xl hover:text-white/70 transition break-all"
               >
                 egzongjuka@gmail.com
               </a>
 
-            </div>
+            </motion.div>
 
             {/* INSTAGRAM */}
-            <div className="border border-white/10 rounded-[25px] md:rounded-[30px] p-6 md:p-10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500">
+            <motion.div
+              {...fadeZoom}
+              whileHover={{
+                y: -6,
+                scale: 1.01,
+              }}
+              className="border border-white/10 rounded-[25px] md:rounded-[30px] p-5 md:p-8 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+            >
 
               <div className="flex items-center gap-4 md:gap-5 mb-6 md:mb-8">
 
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center">
-
                   <img
                     src="/icons/instagram.png"
                     alt="Instagram"
                     className="w-7 h-7 md:w-8 md:h-8 object-contain"
                   />
-
                 </div>
 
                 <div>
@@ -344,26 +428,31 @@ export default function PremiereStudioHomepage() {
               <a
                 href="https://www.instagram.com/premierestudioo/"
                 target="_blank"
-                className="text-xl md:text-3xl font-normal hover:text-white/70 transition"
+                className="text-lg md:text-2xl hover:text-white/70 transition"
               >
                 @premierestudioo
               </a>
 
-            </div>
+            </motion.div>
 
             {/* LOCATION */}
-            <div className="border border-white/10 rounded-[25px] md:rounded-[30px] p-6 md:p-10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500">
+            <motion.div
+              {...fadeZoom}
+              whileHover={{
+                y: -6,
+                scale: 1.01,
+              }}
+              className="border border-white/10 rounded-[25px] md:rounded-[30px] p-5 md:p-8 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-500"
+            >
 
               <div className="flex items-center gap-4 md:gap-5 mb-6 md:mb-8">
 
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center">
-
                   <img
                     src="/icons/location.png"
                     alt="Location"
                     className="w-7 h-7 md:w-8 md:h-8 object-contain"
                   />
-
                 </div>
 
                 <div>
@@ -383,22 +472,24 @@ export default function PremiereStudioHomepage() {
               <a
                 href="https://maps.app.goo.gl/WhFRb43ebb2J9YvD6"
                 target="_blank"
-                className="text-xl md:text-3xl font-normal hover:text-white/70 transition"
+                className="text-lg md:text-2xl hover:text-white/70 transition"
               >
                 Pejë, Kosovo
               </a>
 
-            </div>
+            </motion.div>
 
           </div>
 
         </motion.div>
+
       </section>
 
       {/* FOOTER */}
       <footer className="border-t border-white/10 py-10 md:py-16 text-center text-white/40 text-[10px] md:text-sm tracking-[0.15em] md:tracking-[0.2em] uppercase bg-black px-4">
         © 2026 PREMIERË STUDIO — All Rights Reserved
       </footer>
+
     </div>
   );
 }
