@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function PremiereStudioHomepage() {
+  const [language, setLanguage] = useState("al");
+
   return (
     <div
       id="top"
@@ -25,10 +28,16 @@ export default function PremiereStudioHomepage() {
             />
           </motion.div>
 
-          {/* NAVIGATION */}
-          <nav className="hidden md:flex gap-12 text-sm tracking-[0.2em] uppercase text-white/80">
-            {["Home", "Portfolio", "About", "Contact"].map(
-              (item, index) => (
+          {/* RIGHT SIDE */}
+          <div className="flex items-center gap-8">
+
+            {/* NAVIGATION */}
+            <nav className="hidden md:flex gap-12 text-sm tracking-[0.2em] uppercase text-white/80">
+              {[
+                language === "al" ? "Kreu" : "Home",
+                language === "al" ? "Rreth Nesh" : "About",
+                language === "al" ? "Kontakti" : "Contact",
+              ].map((item, index) => (
                 <motion.a
                   key={index}
                   href="#"
@@ -39,9 +48,39 @@ export default function PremiereStudioHomepage() {
                 >
                   {item}
                 </motion.a>
-              )
-            )}
-          </nav>
+              ))}
+            </nav>
+
+            {/* LANGUAGE SWITCH */}
+            <div className="flex items-center gap-3 text-sm tracking-[0.2em] uppercase">
+
+              <button
+                onClick={() => setLanguage("al")}
+                className={`transition ${
+                  language === "al"
+                    ? "text-white"
+                    : "text-white/40 hover:text-white"
+                }`}
+              >
+                AL
+              </button>
+
+              <span className="text-white/20">|</span>
+
+              <button
+                onClick={() => setLanguage("en")}
+                className={`transition ${
+                  language === "en"
+                    ? "text-white"
+                    : "text-white/40 hover:text-white"
+                }`}
+              >
+                EN
+              </button>
+
+            </div>
+
+          </div>
 
         </div>
       </header>
@@ -74,7 +113,7 @@ export default function PremiereStudioHomepage() {
             transition={{ duration: 1 }}
             className="uppercase tracking-[0.35em] text-[10px] md:text-sm text-white/60 mb-5"
           >
-            Welcome To
+            {language === "al" ? "Mirë se vini në" : "Welcome To"}
           </motion.p>
 
           {/* BIG LOGO */}
@@ -94,7 +133,9 @@ export default function PremiereStudioHomepage() {
             transition={{ duration: 1.5 }}
             className="mt-8 md:mt-10 text-xs md:text-base tracking-[0.18em] md:tracking-[0.25em] uppercase text-white/70 leading-6"
           >
-            We don’t just film moments — we tell your story
+            {language === "al"
+              ? "Ne nuk filmojmë vetëm momente — ne tregojmë historinë tuaj"
+              : "We don’t just film moments — we tell your story"}
           </motion.p>
 
           {/* BUTTONS */}
@@ -109,7 +150,7 @@ export default function PremiereStudioHomepage() {
               whileHover={{ scale: 1.05 }}
               className="w-full sm:w-auto border border-white/30 px-7 md:px-8 py-4 rounded-full uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-white hover:text-black transition duration-500"
             >
-              Watch Showreel
+              {language === "al" ? "Shiko Showreel" : "Watch Showreel"}
             </motion.button>
 
             <motion.a
@@ -117,7 +158,7 @@ export default function PremiereStudioHomepage() {
               whileHover={{ scale: 1.05 }}
               className="w-full sm:w-auto border border-white/30 px-7 md:px-8 py-4 rounded-full uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-white hover:text-black transition duration-500"
             >
-              Contact Us
+              {language === "al" ? "Kontakti" : "Contact Us"}
             </motion.a>
 
           </motion.div>
@@ -156,14 +197,25 @@ export default function PremiereStudioHomepage() {
           <div className="max-w-xl">
 
             <h2 className="text-4xl md:text-6xl leading-tight mb-8 md:mb-10">
-              We Capture
-              <br />
-              What Matters.
+              {language === "al" ? (
+                <>
+                  Ne Kapim
+                  <br />
+                  Momentet që Kanë Rëndësi.
+                </>
+              ) : (
+                <>
+                  We Capture
+                  <br />
+                  What Matters.
+                </>
+              )}
             </h2>
 
             <p className="text-white/70 leading-7 md:leading-8 text-base md:text-lg">
-              At PREMIERË STUDIO, we create cinematic wedding films that
-              capture real emotions and transform them into timeless memories.
+              {language === "al"
+                ? "Në PREMIERË STUDIO krijojmë video dhe fotografi kinematografike që kapin emocionet reale dhe i shndërrojnë në kujtime të përjetshme."
+                : "At PREMIERË STUDIO, we create cinematic wedding films that capture real emotions and transform them into timeless memories."}
             </p>
 
           </div>
@@ -185,11 +237,13 @@ export default function PremiereStudioHomepage() {
         >
 
           <h2 className="text-4xl md:text-7xl uppercase mb-6 md:mb-10">
-            Contact
+            {language === "al" ? "Kontakti" : "Contact"}
           </h2>
 
           <p className="text-white/60 text-base md:text-lg mb-12 md:mb-16">
-            Let’s create timeless memories together.
+            {language === "al"
+              ? "Le të krijojmë kujtime të paharrueshme së bashku."
+              : "Let’s create timeless memories together."}
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-10 text-left">
@@ -205,11 +259,13 @@ export default function PremiereStudioHomepage() {
 
                 <div>
                   <p className="uppercase tracking-[0.25em] text-white/40 text-[10px] md:text-xs mb-1">
-                    Phone
+                    {language === "al" ? "Telefoni" : "Phone"}
                   </p>
 
                   <p className="text-white text-base md:text-lg">
-                    Direct Contact
+                    {language === "al"
+                      ? "Kontakti Direkt"
+                      : "Direct Contact"}
                   </p>
                 </div>
 
@@ -239,7 +295,9 @@ export default function PremiereStudioHomepage() {
                   </p>
 
                   <p className="text-white text-base md:text-lg">
-                    Send Us A Message
+                    {language === "al"
+                      ? "Na dërgo një mesazh"
+                      : "Send Us A Message"}
                   </p>
                 </div>
 
@@ -275,7 +333,9 @@ export default function PremiereStudioHomepage() {
                   </p>
 
                   <p className="text-white text-base md:text-lg">
-                    Follow Our Work
+                    {language === "al"
+                      ? "Na ndiqni"
+                      : "Follow Our Work"}
                   </p>
                 </div>
 
@@ -308,11 +368,13 @@ export default function PremiereStudioHomepage() {
 
                 <div>
                   <p className="uppercase tracking-[0.25em] text-white/40 text-[10px] md:text-xs mb-1">
-                    Location
+                    {language === "al" ? "Lokacioni" : "Location"}
                   </p>
 
                   <p className="text-white text-base md:text-lg">
-                    Visit Our Studio
+                    {language === "al"
+                      ? "Vizitoni studion tonë"
+                      : "Visit Our Studio"}
                   </p>
                 </div>
 
