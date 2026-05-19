@@ -11,7 +11,7 @@ export default function PremiereStudioHomepage() {
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
-          
+
           {/* LOGO */}
           <motion.div
             initial={{ opacity: 0, y: -40 }}
@@ -43,7 +43,7 @@ export default function PremiereStudioHomepage() {
             )}
           </nav>
 
-          {/* BUTTON */}
+          {/* BOOK BUTTON */}
           <motion.a
             href="https://calendly.com/egzongjuka/30min"
             target="_blank"
@@ -56,9 +56,9 @@ export default function PremiereStudioHomepage() {
         </div>
       </header>
 
-      {/* HERO */}
+      {/* HERO SECTION */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        
+
         {/* HERO IMAGE */}
         <img
           src="/images/hero.jpg"
@@ -69,7 +69,7 @@ export default function PremiereStudioHomepage() {
         {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/70" />
 
-        {/* CONTENT */}
+        {/* HERO CONTENT */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -136,7 +136,7 @@ export default function PremiereStudioHomepage() {
         </motion.div>
       </section>
 
-      {/* ABOUT */}
+      {/* ABOUT SECTION */}
       <section className="grid md:grid-cols-2 min-h-screen bg-[#050505]">
 
         {/* TEXT */}
@@ -162,7 +162,7 @@ export default function PremiereStudioHomepage() {
           </div>
         </motion.div>
 
-        {/* IMAGE */}
+        {/* ABOUT IMAGE */}
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -171,7 +171,7 @@ export default function PremiereStudioHomepage() {
         >
 
           <img
-            src="/images/about.jpg"
+            src="/images/about.JPG"
             alt="About"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -181,7 +181,7 @@ export default function PremiereStudioHomepage() {
         </motion.div>
       </section>
 
-      {/* BOOKING */}
+      {/* BOOKING SECTION */}
       <section className="relative py-40 px-8 overflow-hidden border-t border-white/10">
 
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black" />
