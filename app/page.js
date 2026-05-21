@@ -231,38 +231,24 @@ export default function PremiereStudioHomepage() {
       </section>
 
       {/* ABOUT */}
-      <section className="grid md:grid-cols-2 bg-[#050505]">
-
-        {/* IMAGE */}
-        <motion.div
-          {...fadeZoom}
-          className="relative h-[420px] md:min-h-[800px] overflow-hidden md:rounded-l-[40px] order-1 md:order-2"
-        >
-
-          <img
-            src="/images/about.JPG"
-            alt="About"
-            className="absolute inset-0 w-full h-full object-cover scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/10" />
-
-        </motion.div>
+      <section className="grid grid-cols-2 md:grid-cols-2 bg-[#050505] min-h-screen md:min-h-0">
 
         {/* TEXT */}
-        <div className="flex items-center px-6 md:px-20 py-16 md:py-20 order-2 md:order-1">
+        <div className="flex items-center px-4 md:px-20 py-10 md:py-20">
 
           <div className="max-w-xl">
 
             <motion.h2
               {...fadeZoom}
-              className="text-4xl md:text-6xl leading-tight mb-8 md:mb-10"
+              className="text-2xl md:text-6xl leading-tight mb-6 md:mb-10"
             >
               {language === "al" ? (
                 <>
                   Ne Kapim
                   <br />
-                  Momentet që Kanë Rëndësi.
+                  Momentet që Kanë
+                  <br />
+                  Rëndësi.
                 </>
               ) : (
                 <>
@@ -275,7 +261,7 @@ export default function PremiereStudioHomepage() {
 
             <motion.p
               {...fadeZoom}
-              className="text-white/70 leading-7 md:leading-8 text-base md:text-lg"
+              className="text-white/70 leading-6 md:leading-8 text-xs md:text-lg"
             >
               {language === "al"
                 ? "Në PREMIERË STUDIO krijojmë video dhe fotografi kinematografike që kapin emocionet reale dhe i shndërrojnë në kujtime të përjetshme."
@@ -285,6 +271,22 @@ export default function PremiereStudioHomepage() {
           </div>
 
         </div>
+
+        {/* IMAGE */}
+        <motion.div
+          {...fadeZoom}
+          className="relative h-screen md:min-h-[800px] overflow-hidden"
+        >
+
+          <img
+            src="/images/about.JPG"
+            alt="About"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-black/10" />
+
+        </motion.div>
 
       </section>
 
