@@ -231,7 +231,7 @@ export default function PremiereStudioHomepage() {
       </section>
 
       {/* ABOUT */}
-      <section className="grid grid-cols-2 md:grid-cols-2 bg-[#050505] min-h-screen md:min-h-0">
+      <section className="grid grid-cols-2 bg-[#050505] min-h-[70vh] md:min-h-0">
 
         {/* TEXT */}
         <div className="flex items-center px-4 md:px-20 py-10 md:py-20">
@@ -275,7 +275,7 @@ export default function PremiereStudioHomepage() {
         {/* IMAGE */}
         <motion.div
           {...fadeZoom}
-          className="relative h-screen md:min-h-[800px] overflow-hidden"
+          className="relative h-[70vh] md:min-h-[800px] overflow-hidden"
         >
 
           <img
