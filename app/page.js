@@ -136,7 +136,6 @@ export default function PremiereStudioHomepage() {
       {/* HERO */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
-        {/* HERO IMAGE */}
         <motion.img
           src="/images/hero.jpg"
           alt="Hero"
@@ -149,10 +148,8 @@ export default function PremiereStudioHomepage() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/70" />
 
-        {/* CONTENT */}
         <div className="relative z-10 text-center px-5 md:px-6 max-w-5xl">
 
           {/* WELCOME */}
@@ -203,26 +200,26 @@ export default function PremiereStudioHomepage() {
             className="mt-8 md:mt-12 flex flex-row items-center justify-center gap-3 md:gap-6 flex-wrap"
           >
 
-            <motion.button
-              whileHover={{
-                scale: 1.03,
-              }}
-              transition={{ duration: 0.4 }}
-              className="border border-white/30 px-5 md:px-8 py-3 md:py-4 rounded-full uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-white hover:text-black transition duration-500"
-            >
+            {/* SHOWREEL */}
+            <button className="border border-white/30 px-5 md:px-8 py-3 md:py-4 rounded-full uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-white hover:text-black transition duration-500">
               {language === "al" ? "Shiko Showreel" : "Watch Showreel"}
-            </motion.button>
+            </button>
 
-            <motion.a
+            {/* CONTACT */}
+            <a
               href="#contact"
-              whileHover={{
-                scale: 1.03,
-              }}
-              transition={{ duration: 0.4 }}
               className="border border-white/30 px-5 md:px-8 py-3 md:py-4 rounded-full uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-white hover:text-black transition duration-500"
             >
               {language === "al" ? "Kontakti" : "Contact Us"}
-            </motion.a>
+            </a>
+
+            {/* LOGIN */}
+            <a
+              href="/login"
+              className="border border-white/30 px-5 md:px-8 py-3 md:py-4 rounded-full uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-white hover:text-black transition duration-500"
+            >
+              Client Login
+            </a>
 
           </motion.div>
 
@@ -314,10 +311,7 @@ export default function PremiereStudioHomepage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 text-left max-w-5xl mx-auto">
 
             {/* PHONE */}
-            <motion.div
-              {...fadeZoom}
-              className="border border-white/10 rounded-[20px] p-3 bg-white/5 backdrop-blur-md hover:bg-white/8 transition-all duration-700"
-            >
+            <div className="border border-white/10 rounded-[20px] p-3 bg-white/5 backdrop-blur-md">
 
               <div className="flex items-center gap-2 mb-3">
 
@@ -327,13 +321,11 @@ export default function PremiereStudioHomepage() {
 
                 <div>
                   <p className="uppercase tracking-[0.25em] text-white/40 text-[8px] mb-1">
-                    {language === "al" ? "Telefoni" : "Phone"}
+                    Telefoni
                   </p>
 
                   <p className="text-[11px] md:text-sm">
-                    {language === "al"
-                      ? "Kontakti Direkt"
-                      : "Direct Contact"}
+                    Kontakti Direkt
                   </p>
                 </div>
 
@@ -341,18 +333,15 @@ export default function PremiereStudioHomepage() {
 
               <a
                 href="tel:+38349298296"
-                className="text-xs md:text-base hover:text-white/70 transition"
+                className="text-xs md:text-base"
               >
                 +383 49 298 296
               </a>
 
-            </motion.div>
+            </div>
 
             {/* EMAIL */}
-            <motion.div
-              {...fadeZoom}
-              className="border border-white/10 rounded-[20px] p-3 bg-white/5 backdrop-blur-md hover:bg-white/8 transition-all duration-700"
-            >
+            <div className="border border-white/10 rounded-[20px] p-3 bg-white/5 backdrop-blur-md">
 
               <div className="flex items-center gap-2 mb-3">
 
@@ -366,9 +355,7 @@ export default function PremiereStudioHomepage() {
                   </p>
 
                   <p className="text-[11px] md:text-sm">
-                    {language === "al"
-                      ? "Na dërgo një mesazh"
-                      : "Send Us A Message"}
+                    Na dërgo një mesazh
                   </p>
                 </div>
 
@@ -376,18 +363,15 @@ export default function PremiereStudioHomepage() {
 
               <a
                 href="mailto:egzongjuka@gmail.com"
-                className="text-[11px] md:text-sm hover:text-white/70 transition break-all"
+                className="text-[11px] md:text-sm break-all"
               >
                 egzongjuka@gmail.com
               </a>
 
-            </motion.div>
+            </div>
 
             {/* INSTAGRAM */}
-            <motion.div
-              {...fadeZoom}
-              className="border border-white/10 rounded-[20px] p-3 bg-white/5 backdrop-blur-md hover:bg-white/8 transition-all duration-700"
-            >
+            <div className="border border-white/10 rounded-[20px] p-3 bg-white/5 backdrop-blur-md">
 
               <div className="flex items-center gap-2 mb-3">
 
@@ -405,9 +389,7 @@ export default function PremiereStudioHomepage() {
                   </p>
 
                   <p className="text-[11px] md:text-sm">
-                    {language === "al"
-                      ? "Na ndiqni"
-                      : "Follow Our Work"}
+                    Na ndiqni
                   </p>
                 </div>
 
@@ -416,18 +398,15 @@ export default function PremiereStudioHomepage() {
               <a
                 href="https://www.instagram.com/premierestudioo/"
                 target="_blank"
-                className="text-[11px] md:text-sm hover:text-white/70 transition"
+                className="text-[11px] md:text-sm"
               >
                 @premierestudioo
               </a>
 
-            </motion.div>
+            </div>
 
             {/* LOCATION */}
-            <motion.div
-              {...fadeZoom}
-              className="border border-white/10 rounded-[20px] p-3 bg-white/5 backdrop-blur-md hover:bg-white/8 transition-all duration-700"
-            >
+            <div className="border border-white/10 rounded-[20px] p-3 bg-white/5 backdrop-blur-md">
 
               <div className="flex items-center gap-2 mb-3">
 
@@ -441,13 +420,11 @@ export default function PremiereStudioHomepage() {
 
                 <div>
                   <p className="uppercase tracking-[0.25em] text-white/40 text-[8px] mb-1">
-                    {language === "al" ? "Lokacioni" : "Location"}
+                    Lokacioni
                   </p>
 
                   <p className="text-[11px] md:text-sm">
-                    {language === "al"
-                      ? "Vizitoni studion tonë"
-                      : "Visit Our Studio"}
+                    Vizitoni studion tonë
                   </p>
                 </div>
 
@@ -456,12 +433,12 @@ export default function PremiereStudioHomepage() {
               <a
                 href="https://maps.app.goo.gl/WhFRb43ebb2J9YvD6"
                 target="_blank"
-                className="text-[11px] md:text-sm hover:text-white/70 transition"
+                className="text-[11px] md:text-sm"
               >
                 Pejë, Kosovo
               </a>
 
-            </motion.div>
+            </div>
 
           </div>
 
