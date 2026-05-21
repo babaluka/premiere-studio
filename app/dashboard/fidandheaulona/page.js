@@ -24,18 +24,16 @@ export default function FidanAulonaDashboard() {
       {/* CONTENT */}
       <div className="grid md:grid-cols-2 gap-8">
 
-        {/* VIDEO CARD */}
+        {/* SHORT FILM */}
         <div className="border border-white/10 rounded-[30px] overflow-hidden bg-white/5 backdrop-blur-xl">
 
-          {/* VIDEO */}
           <iframe
             className="w-full aspect-video"
-            src="https://www.youtube.com/embed/lVvFGNlkA_w"
-            title="Wedding Film"
+            src="https://www.youtube.com/embed/3ifh2l_xKnw?modestbranding=1&rel=0"
+            title="Short Film"
             allowFullScreen
           />
 
-          {/* INFO */}
           <div className="p-6">
 
             <p className="uppercase tracking-[0.25em] text-white/40 text-xs mb-3">
@@ -43,11 +41,11 @@ export default function FidanAulonaDashboard() {
             </p>
 
             <h2 className="text-2xl mb-3">
-              Highlight Film
+              Short Film
             </h2>
 
             <p className="text-white/60 leading-7">
-              PREMIERË STUDIO Wedding Experience
+              PREMIERË STUDIO Cinematic Wedding Experience
             </p>
 
           </div>

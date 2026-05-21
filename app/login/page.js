@@ -37,9 +37,17 @@ export default function LoginPage() {
         </div>
 
         {/* TITLE */}
-        <h1 className="text-3xl mb-8 text-center uppercase tracking-[0.2em]">
+        <h1 className="text-3xl mb-4 text-center uppercase tracking-[0.2em]">
           Client Login
         </h1>
+
+        {/* BACK BUTTON */}
+        <a
+          href="/"
+          className="block text-center text-white/50 text-sm mb-8 hover:text-white transition"
+        >
+          ← Back to Homepage
+        </a>
 
         {/* INPUTS */}
         <div className="space-y-5">
