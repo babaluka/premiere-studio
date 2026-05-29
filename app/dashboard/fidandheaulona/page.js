@@ -27,12 +27,16 @@ export default function FidanAulonaDashboard() {
         {/* SHORT FILM */}
         <div className="border border-white/10 rounded-[30px] overflow-hidden bg-white/5 backdrop-blur-xl">
 
-          <iframe
-            className="w-full aspect-video"
-            src="https://www.youtube.com/embed/3ifh2l_xKnw?modestbranding=1&rel=0"
-            title="Short Film"
-            allowFullScreen
-          />
+          <video
+            className="w-full aspect-video object-cover"
+            controls
+            controlsList="nodownload"
+          >
+            <source
+              src="https://f005.backblazeb2.com/file/premiere-studio/weddings/Aulona+%26+Fidan+-+Short+Film.mp4"
+              type="video/mp4"
+            />
+          </video>
 
           <div className="p-6">
 
@@ -45,7 +49,7 @@ export default function FidanAulonaDashboard() {
             </h2>
 
             <p className="text-white/60 leading-7">
-              PREMIERË STUDIO Cinematic Wedding Experience
+              Where Love Becomes Cinema
             </p>
 
           </div>
@@ -73,7 +77,7 @@ export default function FidanAulonaDashboard() {
             </h2>
 
             <p className="text-white/60 leading-7">
-              Full Wedding Day Experience by PREMIERË STUDIO
+              The Complete Wedding Story
             </p>
 
           </div>
